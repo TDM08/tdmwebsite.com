@@ -23,6 +23,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -209,6 +210,33 @@
     </div>
   </section>
 
+  <section class="testimonials" id="testimonials">
+      <h2 class="heading">Client <span>Testimonials</span></h2>
+   <div class="container">
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <div class="user-text active-text">
+          <i class='bx bxs-quote-alt-left'></i>
+          <p>John is fantastic at making short, attention-grabbing videos perfect for social media. His creativity and skill make every video pop. He is flexible and able to customize the content and make adjustments according to my guidelines. Thanks John and team!
+          </p>
+          <span>Sarah Trott, (Fourth trimester podcast)
+          </span>
+        </div>
+        <div class="user-text">
+          <i class='bx bxs-quote-alt-left'></i>
+          <p>John David did an amazing job on my first video!  Looking forward to doing more work with him!
+          </p>
+          <span>Kim Taylor,  (KTREG real estate)</span>
+        </div>
+      </div>
+      <div class="testimonial-pic">
+        <img src="images/sarah.jpg" class="user-pic active-pic" onclick="showReview()">
+        <img src="images/ktreg.jpg" class="user-pic" onclick="showReview()">
+      </div>
+    </div>
+   </div>
+  </section>
+
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
@@ -250,6 +278,26 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <script>
+
+let userTexts = document.getElementsByClassName("user-text");
+let userPics = document.getElementsByClassName("user-pic");
+
+function showReview(){
+  for(userPic of userPics){
+    userPic.classList.remove("active-pic");
+  }
+  for(userText of userTexts){
+    userText.classList.remove("active-text");
+  }
+  let i = Array.from(userPics).indexOf(event.target);
+
+  userPics[i].classList.add("active-pic");
+  userTexts[i].classList.add("active-text");
+}
+
   </script>
   
 </body>
