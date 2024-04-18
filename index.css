@@ -41,7 +41,7 @@ section {
   padding: 2rem 9%;
   background: var(--bg-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
 }
@@ -461,6 +461,8 @@ section .testimonials{
 @media (max-width: 991px) {
   .header {
     padding: 2rem 3%;
+    justify-content: right;
+    padding-right: 10px;
   }
 
   section {
@@ -499,7 +501,7 @@ section .testimonials{
   .navbar {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 0%;
     width: 100%;
     padding: 1rem 3%;
     background: var(--bg-color);
