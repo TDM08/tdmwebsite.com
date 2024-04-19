@@ -486,6 +486,9 @@ section .testimonials{
       left: 35px;
       top: 0%;
     }
+    .user-text span{
+      margin-top: 10px;
+    }
   }
 
   .footer {
